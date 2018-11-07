@@ -1,0 +1,9 @@
+<section>
+  <h1>
+    <i class="material-icons">home</i>Home
+  </h1>
+  <div *ngFor="let product of products" lazy-load-images>
+    <h5>{{product.title}}</h5>
+    <img [attr.data-src]="product.thumbnailUrl"/>
+  </div>
+</section>
