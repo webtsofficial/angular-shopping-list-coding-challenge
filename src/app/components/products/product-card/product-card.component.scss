@@ -1,0 +1,27 @@
+@import "../../../../styles/variables";
+
+div.product-card {
+  display: block;
+  width: 95%;
+  margin: 30px auto;
+  padding: 30px;
+  box-shadow: 0 4px 12px $color-shadow-light;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 2px 6px $color-shadow-dark;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto 30px;
+  }
+  p {
+    display: block;
+    height: 100px;
+    text-align: center;
+    font-family: $font-merriweather;
+    font-size: 22px;
+  }
+}

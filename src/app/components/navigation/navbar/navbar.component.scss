@@ -1,0 +1,31 @@
+
+
+ul.nav-desktop {
+  display: none;
+  list-style-type: none;
+  li {
+    display: inline-block;
+    padding: 20px 40px;
+  }
+}
+ul.nav-mobile {
+  display: block;
+  list-style-type: none;
+  li {
+    display: block;
+    width: 100%;
+    padding: 20px;
+  }
+}
+.nav-mobile-icon {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  ul.nav-desktop {
+    display: block;
+  }
+  ul.nav-mobile, .nav-mobile-icon {
+    display: none;
+  }
+}
