@@ -1,26 +1,52 @@
-
-
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/mixins.scss";
+// desktop nav
 ul.nav-desktop {
   display: none;
   list-style-type: none;
   li {
     display: inline-block;
-    padding: 20px 40px;
   }
 }
+// mobile nav
 ul.nav-mobile {
   display: block;
   list-style-type: none;
   li {
     display: block;
     width: 100%;
-    padding: 20px;
+  }
+}
+// general link + icon
+ul {
+  background-color: #111;
+  padding: 0;
+  li {
+    background-color: #111;
+    @include transition((background-color 0.3s ease-in-out));
+
+    &:hover {
+      background-color: #333;
+    }
+    a {
+      display: block;
+      padding: 20px 30px;
+      font-size: 22px;
+      font-weight: 300;
+      text-decoration: none;
+      color: #fff;
+      i {
+        position: relative;
+        top: 4px;
+      }
+    }
   }
 }
 .nav-mobile-icon {
   display: block;
 }
 
+//--------------- MEDIA --------------------
 @media screen and (min-width: 768px) {
   ul.nav-desktop {
     display: block;

@@ -3,6 +3,7 @@ import {
     Input,
     OnInit
 } from '@angular/core';
+import {Product} from '../../../models/Product';
 
 @Component({
   selector: 'app-product-card',
@@ -10,11 +11,14 @@ import {
   styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent implements OnInit {
-  @Input() product;
+  @Input() product: Product;
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
+      console.log(this.product);
   }
 
 }
