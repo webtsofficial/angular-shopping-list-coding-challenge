@@ -4,6 +4,7 @@ import {
     OnInit
 } from '@angular/core';
 import {Product} from '../../../models/Product';
+import {ShoppingCardService} from "../../../services/shopping-card/shopping-card.service";
 
 @Component({
   selector: 'app-product-card',
@@ -13,8 +14,7 @@ import {Product} from '../../../models/Product';
 export class ProductCardComponent implements OnInit {
   @Input() product: Product;
 
-  constructor() {
-
+  constructor(public shoppingCartService: ShoppingCardService) {
   }
 
   ngOnInit() {
