@@ -1,4 +1,12 @@
 // Colors
+$color-primary-dark: #00a36c;
+$color-primary: #00d09a;
+$color-primary-light: #b3efdb;
+
+$color-secondary-dark: #131313;
+$color-secondary: #262626;
+$color-secondary-light: #484848;
+
 $color-black: #000;
 $color-shadow-light: rgba(0,0,0,0.35);
 $color-shadow-dark: rgba(0,0,0,0.6);
@@ -6,3 +14,28 @@ $color-shadow-dark: rgba(0,0,0,0.6);
 // Font-Families
 $font-merriweather: Merriweather, serif;
 $font-roboto: Roboto, sans-serif;
+
+// Shadows
+$shadow-small-dark:   (0 1px 4px $color-shadow-dark);
+$shadow-medium-dark:  (0 2px 8px $color-shadow-dark);
+$shadow-large-dark:   (0 3px 12px $color-shadow-dark);
+
+$shadow-small-light:   (0 1px 4px $color-shadow-light);
+$shadow-medium-light:  (0 2px 8px $color-shadow-light);
+$shadow-large-light:   (0 3px 12px $color-shadow-light);
+
+// Transitions
+$transition-all-short:  (all 0.3s ease-in-out);
+$transition-all-medium: (all 0.6s ease-in-out);
+$transition-all-long:   (all 0.9s ease-in-out);
+
+$transition-bgc-short:  (background-color 0.3s ease-in-out);
+$transition-bgc-medium: (background-color 0.6s ease-in-out);
+$transition-bgc-long:   (background-color 0.9s ease-in-out);
+
+// Border-Radius
+$border-radius-s: 2px;
+$border-radius-m: 5px;
+$border-radius-l: 8px;
+$border-radius-round: 2000px;
+$border-radius-oval: 100%;

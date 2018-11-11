@@ -1,4 +1,14 @@
 <div class="product-card">
   <img [attr.data-src]="product.thumbnailUrl"/>
-  <p>{{product.title}}</p>
+  <p class="title">{{product.title}}</p>
+  <div class="price-actions-container clearfix">
+    <!-- Actions -->
+    <div class="actions">
+        <button class="cta-button"><i class="material-icons">shopping_cart</i> Kaufen</button>
+    </div>
+    <!-- Price -->
+    <div class="price text-right">
+      {{product.price | currency: 'EUR':'symbol':'1.2'}}
+    </div>
+  </div>
 </div>

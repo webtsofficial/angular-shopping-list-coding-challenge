@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import {LOCALE_ID, NgModule} from '@angular/core';
+//import localeDe from '@angular/common/locales/de';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/sites/home/home.component';
@@ -10,8 +10,8 @@ import { ProductCardComponent } from './components/products/product-card/product
 import { ShoppingCartItemComponent } from './components/shopping-cart/shopping-cart-item/shopping-cart-item.component';
 import { ShoppingCartModalComponent } from './components/shopping-cart/shopping-cart-modal/shopping-cart-modal.component';
 import { ProductDetailsComponent } from './components/products/product-details/product-details.component';
-import {HttpClientModule} from "@angular/common/http";
-import {LazyLoadImagesModule} from "ngx-lazy-load-images";
+import {HttpClientModule} from '@angular/common/http';
+import {LazyLoadImagesModule} from 'ngx-lazy-load-images';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,12 @@ import {LazyLoadImagesModule} from "ngx-lazy-load-images";
     HttpClientModule,
     LazyLoadImagesModule
   ],
-  providers: [],
+  providers: [
+      /*{
+          provide: LOCALE_ID,
+          useValue: 'de-DE'
+      }*/
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

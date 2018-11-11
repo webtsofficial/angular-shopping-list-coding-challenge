@@ -19,14 +19,14 @@ ul.nav-mobile {
 }
 // general link + icon
 ul {
-  background-color: #111;
+  background-color: $color-secondary;
   padding: 0;
   li {
-    background-color: #111;
+    background-color: $color-secondary;
     @include transition((background-color 0.3s ease-in-out));
 
     &:hover {
-      background-color: #333;
+      background-color: $color-secondary-light;
     }
     a {
       display: block;

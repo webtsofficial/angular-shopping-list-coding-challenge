@@ -1,7 +1,58 @@
+@import "styles/variables";
+@import "styles/mixins";
+
 * {
   font-family: Roboto, sans-serif;
 }
 
+html, body {
+  font-size: 10px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Merriweather, serif;
+}
+
+.cta-button {
+  cursor: pointer;
+  display: block;
+  margin: 5px 0;
+  padding: 10px 20px;
+  background-color: $color-primary;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #fff;
+  @include border-radius($border-radius-round);
+  @include box-shadow($shadow-small-light);
+  @include transition($transition-bgc-short);
+
+  i {
+    position: relative;
+    top: 5px;
+  }
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}
+
+@include mobile() {
+  html, body {
+    font-size: 12px;
+  }
+}
+@include tablet() {
+  html, body {
+    font-size: 11px;
+  }
+}
+@include desktop() {
+  html, body {
+    font-size: 10.5px;
+  }
+}
+@include desktopHD {
+  html, body {
+    font-size: 10px;
+  }
 }

@@ -9,17 +9,17 @@ import {map} from 'rxjs/operators';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public products;
+  public products: Product[];
 
   constructor(private productService: ProductService) {
-    productService.allProducts.subscribe<Product[]>((result: Product[]) => {
-      result = result.map(
-          (product: Product) => {
-            product.price = 15;
-            return product;
-          });
-        this.products = result;
-    });
+      productService.allProducts.subscribe((result: Product[]) => {
+          result = result.map(
+              (product: Product) => {
+                  product.price = 15;
+                  return product;
+              });
+          this.products = result;
+      });
   }
 
   ngOnInit() {
