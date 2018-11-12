@@ -7,17 +7,21 @@ import {Product} from '../../../models/Product';
 import {ShoppingCardService} from "../../../services/shopping-card/shopping-card.service";
 
 @Component({
-  selector: 'app-product-card',
-  templateUrl: './product-card.component.html',
-  styleUrls: ['./product-card.component.scss']
+    selector: 'app-product-card',
+    templateUrl: './product-card.component.html',
+    styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent implements OnInit {
-  @Input() product: Product;
+    @Input() product: Product;
 
-  constructor(public shoppingCartService: ShoppingCardService) {
-  }
+    constructor(private shoppingCartService: ShoppingCardService) {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+
+    addItemToShoppingCart(item: Product): void {
+        this.shoppingCartService.addItemToShoppingCart(item);
+    }
 
 }

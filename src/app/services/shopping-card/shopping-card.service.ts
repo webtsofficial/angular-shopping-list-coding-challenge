@@ -1,18 +1,29 @@
 import { Injectable } from '@angular/core';
 import {Product} from '../../models/Product';
-import {Observable} from "rxjs";
+import {BehaviorSubject, Observable, Subject, Subscription} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShoppingCardService {
-    public shoppingCard = new Observable<Product[]>();
+    shoppingCardSubject: BehaviorSubject<Product[]>;
+    shoppingCardObservable: Observable<Product[]>;
+    shoppingCardItems: Product[] = [];
 
     constructor() {
-
+        this.shoppingCardSubject = new BehaviorSubject<Product[]>([]);
+        this.shoppingCardObservable = this.shoppingCardSubject.asObservable();
+        this.shoppingCardObservable.subscribe(items => {
+            this.shoppingCardItems = items;
+        });
     }
 
-    addProductToShoppingCart(product: Product) : void {
-      // todo: check if shopping-card exists and isArray exists
+    addItemToShoppingCart(item: Product) : void {
+        this.shoppingCardItems.push(item);
+        this.shoppingCardSubject.next(this.shoppingCardItems);
+    }
+
+    getItemsFromShoppingCard() {
+        return this.shoppingCardObservable;
     }
 }

@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   font-size: 2rem;
   color: #fff;
+  outline: none !important;
   @include border-radius($border-radius-round);
   @include box-shadow($shadow-small-light);
   @include transition($transition-bgc-short);
